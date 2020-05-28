@@ -1,7 +1,6 @@
 'use strict'
 
 const express = require('express')
-const multer  = require('multer')
 const helmet  = require('helmet')
 const cookieParser = require('cookie-parser')
 
