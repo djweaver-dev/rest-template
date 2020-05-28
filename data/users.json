@@ -1,0 +1,7 @@
+{
+    "admin" : {
+        "password" : "abc123",
+        "email" : "myEmail@mail.com",
+        "blogId" : "My Blog"
+    }
+}

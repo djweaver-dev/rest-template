@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+}
+body {
+    letter-spacing: .16rem;
+    font-size: 1.6rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal {
+    background: gainsboro;
+    max-width: 40%;
+    margin: auto;
+    margin-top: 6rem;
+    padding: 1rem;
+}
+.modal header {
+    text-align: left;
+    background: grey;
+    color: white;
+    font-size: 3.2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.modal main {
+    padding: 2rem;
+    margin: 1rem;
+}
+.modal form {
+    margin: 4rem;
+}
+.modal footer {
+    padding: 1rem;
+    margin: 1rem;
+}

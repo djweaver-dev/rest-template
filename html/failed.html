@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/static/modal.css">
+<div class="modal">
+    <header>Authentication Failure</header>
+    <main>
+        <p>The username/password combination for @username does not exist. Redirecting...</p>
+    </main>
+    <footer>
+        @date
+    </footer>
+    <script>
+        setTimeout(() => {
+            window.location = `/auth`
+        },4000)
+    </script>
+</div>
