@@ -4,9 +4,10 @@ const api = express.Router()
 
 api.get('/', (req, res, next) => {
     console.log('/api')
-
+    //
+    // API endpoints
+    //
     res.send('<h2>API</h2>')
-    next()
 })
 
 module.exports = api
