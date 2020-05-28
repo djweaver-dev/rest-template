@@ -8,8 +8,6 @@ const cookieParser = require('cookie-parser')
 const api  = require('./api')
 const auth = require('./auth')
 const dash = require('./dash')
-const user = require('./user')
-const blog = require('./blog')
 
 const app = express()
 const port = process.env.PORT || 3000
