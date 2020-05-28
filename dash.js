@@ -22,11 +22,4 @@ dash.get('/settings', (req, res, next) => {
     res.send('<h2>Settings</h2>')
 })
 
-dash.get('*', (req, res) => {
-    //
-    // 404 catch-all
-    //
-    res.sendFile('/static/404.html')
-})
-
 module.exports = dash

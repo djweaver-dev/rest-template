@@ -27,6 +27,11 @@ app.get('/', (req, res) => {
     res.send('<h1>/(root path)</h1>')
 })
 
+// 404
+app.get('*', (req, res) => {
+    res.sendFile(process.cwd() + '/html/404.html')
+})
+
 // server listen
 app.listen(port, () => {
     console.log('Server running at port: ' + port)
