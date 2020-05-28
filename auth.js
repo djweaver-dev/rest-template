@@ -2,7 +2,12 @@ const express = require('express')
 const fs = require('fs')
 const auth = express.Router()
 
-const validateUser = (username, password) => {
+// This returns a promise to load the users.json
+// data and authenticate the user against that data,
+// resolving to true or false depending on whether
+// the username/password combo was correct.
+//
+const authenticateUser = (username, password) => {
     return new Promise((resolve, reject) => {
         fs.readFile(
             process.cwd() + '/data/users.json', 
@@ -23,6 +28,10 @@ const validateUser = (username, password) => {
     })
 }
 
+// This is just a simple template rendering script
+// That injects a constant into the markup using
+// split() and join()
+//
 const renderTemplate = (key, value, path) => {
     return new Promise((resolve, reject) => {
         fs.readFile(
@@ -44,12 +53,16 @@ auth.get('/', (req, res, next) => {
     res.sendFile(process.cwd() + '/html/auth.html')
 })
 
+// Gets our form data (as urlencoded) and awaits
+// authentication before conditionally rendering
+// the appropriate response
+//
 auth.post('/login', async (req, res, next) => {
     console.log('/auth/login')
 
     const username = req.body.username
     const password = req.body.password
-    const isAuthorized = await validateUser(username, password)
+    const isAuthorized = await authenticateUser(username, password)
 
     if(isAuthorized){
         res.cookie("username", username)

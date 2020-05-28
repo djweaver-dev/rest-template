@@ -25,7 +25,7 @@ app.use('/dash', dash)
 
 // root
 app.get('/', (req, res) => {
-    res.send('<h1>/(root)</h1>')
+    res.send('<h1>/(root path)</h1>')
 })
 
 // server listen
